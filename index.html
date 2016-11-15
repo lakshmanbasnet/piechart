@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Schools', 'Hours per Day'],
+          ['Colleges',     78],
+          ['Hospitals',     23],
+          ['Hotels',  3],
+          ['bar', 4],
+          ['clubs',    2]
+        ]);
+
+        var options = {
+          title: 'Different items in my community'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <h1>Inserting pie charts to web pages easily</h1>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
